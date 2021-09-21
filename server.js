@@ -18,9 +18,8 @@ const responses = ["It is certain", "It is decidedly so", "Without a doubt", "Ye
 
 
 app.get('/magic/:question', (req, res) => {
-    res.send(`${req.params.question}: <h1>${responses[Math.floor(Math.random()*responses.length)]}</h1>`)
+    res.send(`${req.params.question}: <h1>${responses[Math.floor(Math.random()*responses.length-1)]}</h1>`)
 })
-
 
 app.listen(3000, () => {
     console.log("working!")
