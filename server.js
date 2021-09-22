@@ -10,7 +10,8 @@ app.get('/greeting/:name', (req, res) => {
 
 //tip calculator
 app.get('/tip/:bill/:tipPercentage', (total, tipPercentage) => {
-    tipPercentage.send(total.params.tipAmount)
+    console.log('working')
+    tipPercentage.send(`Your tip is: ${((total.params.tipPercentage/100)*total.params.bill).toFixed(2)}`)
 })
 
 //magic 8 ball
